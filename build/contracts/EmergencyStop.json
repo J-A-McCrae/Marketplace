@@ -1,0 +1,1606 @@
+{
+  "contractName": "EmergencyStop",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "ownerESC",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "emergencyStopSwitch",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "_emergencySwitchValue",
+          "type": "bool"
+        }
+      ],
+      "name": "LogEmergencyStopSwitch",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "emergencySwitchValue",
+          "type": "bool"
+        }
+      ],
+      "name": "emergencyStopFunction",
+      "outputs": [
+        {
+          "name": "_emergencyStopSwitch",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"ownerESC\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"emergencyStopSwitch\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"emergencySwitchValue\",\"type\":\"bool\"}],\"name\":\"emergencyStopFunction\",\"outputs\":[{\"name\":\"_emergencyStopSwitch\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_emergencySwitchValue\",\"type\":\"bool\"}],\"name\":\"LogEmergencyStopSwitch\",\"type\":\"event\"}],\"devdoc\":{\"details\":\"EmergencyStop: A contract that implements the circuit breaker design pattern\",\"methods\":{\"constructor\":{\"details\":\"Declare constructor. Set ownerESC to be the contract creator.\"},\"emergencyStopFunction(bool)\":{\"details\":\"emergencyStopFunction() A function that allows setting emergencyStopSwitch (circuit breaker flag) to true or false\",\"params\":{\"emergencySwitchValue\":\"A boolean data type for changing the state of emergencyStopSwitch (circuit breaker flag)\"},\"return\":\"A boolean data type returning the new value of emergencyStopSwitch (circuit breaker flag)\"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/john/git/Project/contracts/EmergencyStop.sol\":\"EmergencyStop\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/john/git/Project/contracts/EmergencyStop.sol\":{\"keccak256\":\"0x65923f5a1c36d42ace86cccd2db1eb88e321ca425782285abde8a31f9c2a6805\",\"urls\":[\"bzzr://95bb55e7cff2ba1d02aba50aeee9425b7480688fdecd50919c5e579ed8bdc426\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506102a4806100606000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c80630e29975e146100465780637c612f2a14610090578063e621a387146100b2575b600080fd5b61004e6100fa565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b61009861011f565b604051808215151515815260200191505060405180910390f35b6100e0600480360360208110156100c857600080fd5b81019080803515159060200190929190505050610132565b604051808215151515815260200191505060405180910390f35b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600060149054906101000a900460ff1681565b60003373ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16146101d9576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260338152602001806102466033913960400191505060405180910390fd5b7f7813715e6276e764527fb3fc9d9ff59f3239bfbd4c4a3a6fb3a8e54da660f0ad82604051808215151515815260200191505060405180910390a181600060146101000a81548160ff021916908315150217905550600060149054906101000a900460ff16905091905056fe4163636573732064656e6965642e20416363657373207265737472696374656420746f20636f6e7472616374206f776e65722ea165627a7a723058204de7ed6a9e3262af522ff5818d6debfe62ebb86499a890a13de291637e7651fd0029",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c80630e29975e146100465780637c612f2a14610090578063e621a387146100b2575b600080fd5b61004e6100fa565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b61009861011f565b604051808215151515815260200191505060405180910390f35b6100e0600480360360208110156100c857600080fd5b81019080803515159060200190929190505050610132565b604051808215151515815260200191505060405180910390f35b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600060149054906101000a900460ff1681565b60003373ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16146101d9576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260338152602001806102466033913960400191505060405180910390fd5b7f7813715e6276e764527fb3fc9d9ff59f3239bfbd4c4a3a6fb3a8e54da660f0ad82604051808215151515815260200191505060405180910390a181600060146101000a81548160ff021916908315150217905550600060149054906101000a900460ff16905091905056fe4163636573732064656e6965642e20416363657373207265737472696374656420746f20636f6e7472616374206f776e65722ea165627a7a723058204de7ed6a9e3262af522ff5818d6debfe62ebb86499a890a13de291637e7651fd0029",
+  "sourceMap": "297:1803:0:-;;;1382:60;8:9:-1;5:2;;;30:1;27;20:12;5:2;1382:60:0;1425:10;1414:8;;:21;;;;;;;;;;;;;;;;;;297:1803;;;;;;",
+  "deployedSourceMap": "297:1803:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;297:1803:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;390:31;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;554;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;1807:286;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1807:286:0;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;390:31;;;;;;;;;;;;;:::o;554:::-;;;;;;;;;;;;;:::o;1807:286::-;1908:25;929:10;917:22;;:8;;;;;;;;;;;:22;;;909:86;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1954:44;1977:20;1954:44;;;;;;;;;;;;;;;;;;;;;;2030:20;2008:19;;:42;;;;;;;;;;;;;;;;;;2067:19;;;;;;;;;;;2060:26;;1807:286;;;:::o",
+  "source": "/// @title EmergencyStop: A circuit breaker for temporarily disabling contract functions\n/// @author John McCrae\n\n/// @dev This contract requires solidity compiler version 0.5 or higher\npragma solidity ^0.5.0;\n\n/// @dev EmergencyStop: A contract that implements the circuit breaker design pattern\ncontract EmergencyStop {\n    \n    /// @param ownerESC A public payable address data type\n    address payable public ownerESC;\n    \n    /// @param emergencyStopSwitch A public boolean data type to keep track of emergencyStopSwitch (circuit breaker flag)\n    bool public emergencyStopSwitch;\n   \n    /// @param _emergencySwitchValue A boolean data type to keep track of changes to emergencyStopSwitch\n    event LogEmergencyStopSwitch(bool _emergencySwitchValue);\n   \n    /// @dev verifyOwnerESC A modifier requiring the message sender address is equal to the owner address\n    modifier verifyOwnerESC () {\n        require(ownerESC == msg.sender, \"Access denied. Access restricted to contract owner.\");\n        _;\n    }\n   \n    /// @dev verifyEmergencyStopValue A modifier requiring emergencyStopSwitch (circuit breaker flag) to be false\n    modifier verifyEmergencyStopValue () {\n        require(emergencyStopSwitch == false, \"Access denied. This contract has been temporarily disabled.\");\n        _;\n    }\n\n    /// @dev Declare constructor. Set ownerESC to be the contract creator.\n    constructor () public {\n        ownerESC = msg.sender;\n    }\n\n    /// @dev emergencyStopFunction() A function that allows setting emergencyStopSwitch (circuit breaker flag) to true or false\n    /// @param emergencySwitchValue A boolean data type for changing the state of emergencyStopSwitch (circuit breaker flag)\n    /// @return A boolean data type returning the new value of emergencyStopSwitch (circuit breaker flag)\n    function emergencyStopFunction (bool emergencySwitchValue)\n    public\n    verifyOwnerESC\n    returns(bool _emergencyStopSwitch)\n    {\n        emit LogEmergencyStopSwitch(emergencySwitchValue);\n        emergencyStopSwitch = emergencySwitchValue;\n        return emergencyStopSwitch;\n    }\n    \n}",
+  "sourcePath": "/home/john/git/Project/contracts/EmergencyStop.sol",
+  "ast": {
+    "absolutePath": "/home/john/git/Project/contracts/EmergencyStop.sol",
+    "exportedSymbols": {
+      "EmergencyStop": [
+        62
+      ]
+    },
+    "id": 63,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "186:23:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@dev EmergencyStop: A contract that implements the circuit breaker design pattern",
+        "fullyImplemented": true,
+        "id": 62,
+        "linearizedBaseContracts": [
+          62
+        ],
+        "name": "EmergencyStop",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 3,
+            "name": "ownerESC",
+            "nodeType": "VariableDeclaration",
+            "scope": 62,
+            "src": "390:31:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address_payable",
+              "typeString": "address payable"
+            },
+            "typeName": {
+              "id": 2,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "390:15:0",
+              "stateMutability": "payable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address_payable",
+                "typeString": "address payable"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 5,
+            "name": "emergencyStopSwitch",
+            "nodeType": "VariableDeclaration",
+            "scope": 62,
+            "src": "554:31:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 4,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "554:4:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "anonymous": false,
+            "documentation": "@param _emergencySwitchValue A boolean data type to keep track of changes to emergencyStopSwitch",
+            "id": 9,
+            "name": "LogEmergencyStopSwitch",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 8,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7,
+                  "indexed": false,
+                  "name": "_emergencySwitchValue",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9,
+                  "src": "729:26:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 6,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "729:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "728:28:0"
+            },
+            "src": "700:57:0"
+          },
+          {
+            "body": {
+              "id": 20,
+              "nodeType": "Block",
+              "src": "899:114:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        },
+                        "id": 15,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 12,
+                          "name": "ownerESC",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 3,
+                          "src": "917:8:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 13,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1048,
+                            "src": "929:3:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 14,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "929:10:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "src": "917:22:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "4163636573732064656e6965642e20416363657373207265737472696374656420746f20636f6e7472616374206f776e65722e",
+                        "id": 16,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "941:53:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_af496f08420d6ebf23ab6447108e3c7e053662e529995937fcfc8f89c216dc6a",
+                          "typeString": "literal_string \"Access denied. Access restricted to contract owner.\""
+                        },
+                        "value": "Access denied. Access restricted to contract owner."
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_af496f08420d6ebf23ab6447108e3c7e053662e529995937fcfc8f89c216dc6a",
+                          "typeString": "literal_string \"Access denied. Access restricted to contract owner.\""
+                        }
+                      ],
+                      "id": 11,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        1051,
+                        1052
+                      ],
+                      "referencedDeclaration": 1052,
+                      "src": "909:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 17,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "909:86:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 18,
+                  "nodeType": "ExpressionStatement",
+                  "src": "909:86:0"
+                },
+                {
+                  "id": 19,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "1005:1:0"
+                }
+              ]
+            },
+            "documentation": "@dev verifyOwnerESC A modifier requiring the message sender address is equal to the owner address",
+            "id": 21,
+            "name": "verifyOwnerESC",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 10,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "896:2:0"
+            },
+            "src": "872:141:0",
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 31,
+              "nodeType": "Block",
+              "src": "1173:128:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "id": 26,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 24,
+                          "name": "emergencyStopSwitch",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 5,
+                          "src": "1191:19:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "66616c7365",
+                          "id": 25,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "bool",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1214:5:0",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          },
+                          "value": "false"
+                        },
+                        "src": "1191:28:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "4163636573732064656e6965642e205468697320636f6e747261637420686173206265656e2074656d706f726172696c792064697361626c65642e",
+                        "id": 27,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1221:61:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_7b35083be69830d33db3e778199710687c4acc659678d9a5da8fd65e07e2aa17",
+                          "typeString": "literal_string \"Access denied. This contract has been temporarily disabled.\""
+                        },
+                        "value": "Access denied. This contract has been temporarily disabled."
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_7b35083be69830d33db3e778199710687c4acc659678d9a5da8fd65e07e2aa17",
+                          "typeString": "literal_string \"Access denied. This contract has been temporarily disabled.\""
+                        }
+                      ],
+                      "id": 23,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        1051,
+                        1052
+                      ],
+                      "referencedDeclaration": 1052,
+                      "src": "1183:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 28,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1183:100:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 29,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1183:100:0"
+                },
+                {
+                  "id": 30,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "1293:1:0"
+                }
+              ]
+            },
+            "documentation": "@dev verifyEmergencyStopValue A modifier requiring emergencyStopSwitch (circuit breaker flag) to be false",
+            "id": 32,
+            "name": "verifyEmergencyStopValue",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 22,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1170:2:0"
+            },
+            "src": "1136:165:0",
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 40,
+              "nodeType": "Block",
+              "src": "1404:38:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 38,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 35,
+                      "name": "ownerESC",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3,
+                      "src": "1414:8:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 36,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1048,
+                        "src": "1425:3:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 37,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1425:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "1414:21:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "id": 39,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1414:21:0"
+                }
+              ]
+            },
+            "documentation": "@dev Declare constructor. Set ownerESC to be the contract creator.",
+            "id": 41,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 33,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1394:2:0"
+            },
+            "returnParameters": {
+              "id": 34,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1404:0:0"
+            },
+            "scope": 62,
+            "src": "1382:60:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 60,
+              "nodeType": "Block",
+              "src": "1939:154:0",
+              "statements": [
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 51,
+                        "name": "emergencySwitchValue",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 43,
+                        "src": "1977:20:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 50,
+                      "name": "LogEmergencyStopSwitch",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 9,
+                      "src": "1954:22:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_bool_$returns$__$",
+                        "typeString": "function (bool)"
+                      }
+                    },
+                    "id": 52,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1954:44:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 53,
+                  "nodeType": "EmitStatement",
+                  "src": "1949:49:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 56,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 54,
+                      "name": "emergencyStopSwitch",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5,
+                      "src": "2008:19:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 55,
+                      "name": "emergencySwitchValue",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 43,
+                      "src": "2030:20:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "2008:42:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 57,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2008:42:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 58,
+                    "name": "emergencyStopSwitch",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 5,
+                    "src": "2067:19:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 49,
+                  "id": 59,
+                  "nodeType": "Return",
+                  "src": "2060:26:0"
+                }
+              ]
+            },
+            "documentation": "@dev emergencyStopFunction() A function that allows setting emergencyStopSwitch (circuit breaker flag) to true or false\n @param emergencySwitchValue A boolean data type for changing the state of emergencyStopSwitch (circuit breaker flag)\n @return A boolean data type returning the new value of emergencyStopSwitch (circuit breaker flag)",
+            "id": 61,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 46,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 45,
+                  "name": "verifyOwnerESC",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 21,
+                  "src": "1881:14:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1881:14:0"
+              }
+            ],
+            "name": "emergencyStopFunction",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 44,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 43,
+                  "name": "emergencySwitchValue",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 61,
+                  "src": "1839:25:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 42,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1839:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1838:27:0"
+            },
+            "returnParameters": {
+              "id": 49,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 48,
+                  "name": "_emergencyStopSwitch",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 61,
+                  "src": "1908:25:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 47,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1908:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1907:27:0"
+            },
+            "scope": 62,
+            "src": "1807:286:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 63,
+        "src": "297:1803:0"
+      }
+    ],
+    "src": "186:1914:0"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/john/git/Project/contracts/EmergencyStop.sol",
+    "exportedSymbols": {
+      "EmergencyStop": [
+        62
+      ]
+    },
+    "id": 63,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "186:23:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@dev EmergencyStop: A contract that implements the circuit breaker design pattern",
+        "fullyImplemented": true,
+        "id": 62,
+        "linearizedBaseContracts": [
+          62
+        ],
+        "name": "EmergencyStop",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 3,
+            "name": "ownerESC",
+            "nodeType": "VariableDeclaration",
+            "scope": 62,
+            "src": "390:31:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address_payable",
+              "typeString": "address payable"
+            },
+            "typeName": {
+              "id": 2,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "390:15:0",
+              "stateMutability": "payable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address_payable",
+                "typeString": "address payable"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 5,
+            "name": "emergencyStopSwitch",
+            "nodeType": "VariableDeclaration",
+            "scope": 62,
+            "src": "554:31:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 4,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "554:4:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "anonymous": false,
+            "documentation": "@param _emergencySwitchValue A boolean data type to keep track of changes to emergencyStopSwitch",
+            "id": 9,
+            "name": "LogEmergencyStopSwitch",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 8,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7,
+                  "indexed": false,
+                  "name": "_emergencySwitchValue",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9,
+                  "src": "729:26:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 6,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "729:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "728:28:0"
+            },
+            "src": "700:57:0"
+          },
+          {
+            "body": {
+              "id": 20,
+              "nodeType": "Block",
+              "src": "899:114:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        },
+                        "id": 15,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 12,
+                          "name": "ownerESC",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 3,
+                          "src": "917:8:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 13,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1048,
+                            "src": "929:3:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 14,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "929:10:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "src": "917:22:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "4163636573732064656e6965642e20416363657373207265737472696374656420746f20636f6e7472616374206f776e65722e",
+                        "id": 16,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "941:53:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_af496f08420d6ebf23ab6447108e3c7e053662e529995937fcfc8f89c216dc6a",
+                          "typeString": "literal_string \"Access denied. Access restricted to contract owner.\""
+                        },
+                        "value": "Access denied. Access restricted to contract owner."
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_af496f08420d6ebf23ab6447108e3c7e053662e529995937fcfc8f89c216dc6a",
+                          "typeString": "literal_string \"Access denied. Access restricted to contract owner.\""
+                        }
+                      ],
+                      "id": 11,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        1051,
+                        1052
+                      ],
+                      "referencedDeclaration": 1052,
+                      "src": "909:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 17,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "909:86:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 18,
+                  "nodeType": "ExpressionStatement",
+                  "src": "909:86:0"
+                },
+                {
+                  "id": 19,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "1005:1:0"
+                }
+              ]
+            },
+            "documentation": "@dev verifyOwnerESC A modifier requiring the message sender address is equal to the owner address",
+            "id": 21,
+            "name": "verifyOwnerESC",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 10,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "896:2:0"
+            },
+            "src": "872:141:0",
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 31,
+              "nodeType": "Block",
+              "src": "1173:128:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "id": 26,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 24,
+                          "name": "emergencyStopSwitch",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 5,
+                          "src": "1191:19:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "66616c7365",
+                          "id": 25,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "bool",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1214:5:0",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          },
+                          "value": "false"
+                        },
+                        "src": "1191:28:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "4163636573732064656e6965642e205468697320636f6e747261637420686173206265656e2074656d706f726172696c792064697361626c65642e",
+                        "id": 27,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1221:61:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_7b35083be69830d33db3e778199710687c4acc659678d9a5da8fd65e07e2aa17",
+                          "typeString": "literal_string \"Access denied. This contract has been temporarily disabled.\""
+                        },
+                        "value": "Access denied. This contract has been temporarily disabled."
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_7b35083be69830d33db3e778199710687c4acc659678d9a5da8fd65e07e2aa17",
+                          "typeString": "literal_string \"Access denied. This contract has been temporarily disabled.\""
+                        }
+                      ],
+                      "id": 23,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        1051,
+                        1052
+                      ],
+                      "referencedDeclaration": 1052,
+                      "src": "1183:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 28,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1183:100:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 29,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1183:100:0"
+                },
+                {
+                  "id": 30,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "1293:1:0"
+                }
+              ]
+            },
+            "documentation": "@dev verifyEmergencyStopValue A modifier requiring emergencyStopSwitch (circuit breaker flag) to be false",
+            "id": 32,
+            "name": "verifyEmergencyStopValue",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 22,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1170:2:0"
+            },
+            "src": "1136:165:0",
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 40,
+              "nodeType": "Block",
+              "src": "1404:38:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 38,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 35,
+                      "name": "ownerESC",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3,
+                      "src": "1414:8:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 36,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1048,
+                        "src": "1425:3:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 37,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1425:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "1414:21:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "id": 39,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1414:21:0"
+                }
+              ]
+            },
+            "documentation": "@dev Declare constructor. Set ownerESC to be the contract creator.",
+            "id": 41,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 33,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1394:2:0"
+            },
+            "returnParameters": {
+              "id": 34,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1404:0:0"
+            },
+            "scope": 62,
+            "src": "1382:60:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 60,
+              "nodeType": "Block",
+              "src": "1939:154:0",
+              "statements": [
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 51,
+                        "name": "emergencySwitchValue",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 43,
+                        "src": "1977:20:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 50,
+                      "name": "LogEmergencyStopSwitch",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 9,
+                      "src": "1954:22:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_bool_$returns$__$",
+                        "typeString": "function (bool)"
+                      }
+                    },
+                    "id": 52,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1954:44:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 53,
+                  "nodeType": "EmitStatement",
+                  "src": "1949:49:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 56,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 54,
+                      "name": "emergencyStopSwitch",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5,
+                      "src": "2008:19:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 55,
+                      "name": "emergencySwitchValue",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 43,
+                      "src": "2030:20:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "2008:42:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 57,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2008:42:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 58,
+                    "name": "emergencyStopSwitch",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 5,
+                    "src": "2067:19:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 49,
+                  "id": 59,
+                  "nodeType": "Return",
+                  "src": "2060:26:0"
+                }
+              ]
+            },
+            "documentation": "@dev emergencyStopFunction() A function that allows setting emergencyStopSwitch (circuit breaker flag) to true or false\n @param emergencySwitchValue A boolean data type for changing the state of emergencyStopSwitch (circuit breaker flag)\n @return A boolean data type returning the new value of emergencyStopSwitch (circuit breaker flag)",
+            "id": 61,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 46,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 45,
+                  "name": "verifyOwnerESC",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 21,
+                  "src": "1881:14:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1881:14:0"
+              }
+            ],
+            "name": "emergencyStopFunction",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 44,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 43,
+                  "name": "emergencySwitchValue",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 61,
+                  "src": "1839:25:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 42,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1839:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1838:27:0"
+            },
+            "returnParameters": {
+              "id": 49,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 48,
+                  "name": "_emergencyStopSwitch",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 61,
+                  "src": "1908:25:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 47,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1908:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1907:27:0"
+            },
+            "scope": 62,
+            "src": "1807:286:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 63,
+        "src": "297:1803:0"
+      }
+    ],
+    "src": "186:1914:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2019-07-28T22:51:50.877Z",
+  "devdoc": {
+    "details": "EmergencyStop: A contract that implements the circuit breaker design pattern",
+    "methods": {
+      "constructor": {
+        "details": "Declare constructor. Set ownerESC to be the contract creator."
+      },
+      "emergencyStopFunction(bool)": {
+        "details": "emergencyStopFunction() A function that allows setting emergencyStopSwitch (circuit breaker flag) to true or false",
+        "params": {
+          "emergencySwitchValue": "A boolean data type for changing the state of emergencyStopSwitch (circuit breaker flag)"
+        },
+        "return": "A boolean data type returning the new value of emergencyStopSwitch (circuit breaker flag)"
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

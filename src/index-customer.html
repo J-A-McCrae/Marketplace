@@ -1,0 +1,53 @@
+<!-- @title index.html: Front-end HMTL code, presenting a simple user interface for interacting with Marketplace.sol smart contract. -->
+
+<!-- @dev Declare HTML document type, langauge, title and import styles.css -->
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <title>John's Marketplace</title>
+    <link href="./favicon.ico" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css">
+    <script>
+    </script>
+  </head>
+  <body>
+    
+    <!-- @dev Set up labels for key information and ID numbers to display data via JQuery-->
+    <p class="arial">
+    <label class="label label1" for="DApp">DApp:  </label><label class="label label2" for="Marketplace">  Marketplace</label><br /> 
+    <label class="label label1" for="Deployed At">Deployed At:  </label><label class="label label2" id="deployedAt"></label><br /> 
+    <label class="label label1" for="User Address">User Address:  </label><label class="label label2" id="userAddress"></label><br />
+    <label class="label label1" for="User Interface">User Interface:  </label><label class="label label2" id="userInterface"></label><br />
+    <label class="label label1" for="Last User Action">Last User Action:  </label><label class="label label2" id="lastUserAction"></label><br />
+    
+    <p class="arialItalic">
+    <label class="label label1" for="Report1"></label><label class="label label2" id="report1"></label><br />
+    <label class="label label1" for="Report2"></label><label class="label label2" id="report2"></label><br />
+    <label class="label label1" for="Report3"></label><label class="label label2" id="report3"></label><br />
+    <label class="label label1" for="Report4"></label><label class="label label2" id="report4"></label><br />
+    <label class="label label1" for="Report5"></label><label class="label label2" id="report5"></label><br /><br>
+    <label class="label label1" for="Report6"></label><label class="label label2" id="report6"></label><br />
+
+    <!-- @dev Set up labels, input boxes and buttons. Buttons are set to execute contract function interface logic in index.js -->  
+    <div class="container"><br/> 
+ 
+    <p class="arial">
+    <label class="label label1" for="Product ID">Product ID:</label><input class="input" type="text" id="prod_id_read_owner" placeholder="eg. 0,1,2,3...">
+    <button class="button", onclick="App.inputReadStore()">Read Store Product</button>
+
+    <br><br><br><br>
+  
+    <label class="label label1" for="Product ID">Product ID:</label><input class="input" type="text" id="prod_id_buy" placeholder="eg. 0,1,2,3..."><br />     
+    <label class="label label1" for="Amount (Wei)">Amount (Wei):</label><input class="input" type="text" id="prod_eth_buy" placeholder="1 Ether = 1e18 Wei">
+    <button class="button", onclick="App.inputBuyStoreProd()">Buy Store Product</button>
+
+    <p> 
+    
+      <!-- @dev Import key javascript code into this HTML document --> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>   
+    <script src="js/web3.min.js"></script>          
+    <script src="js/truffle-contract.js"></script>  
+    <script src="js/index.js"></script> 
+
+  </body>
+</html>

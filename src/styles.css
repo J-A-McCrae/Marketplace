@@ -1,0 +1,39 @@
+/* @title styles.css: Styling css data, imported into index.html, for general styling elements of the UI.  */
+/* @author John McCrae */
+
+/* Define text font styles */
+p.arial {font-family: Arial; font-style: Normal}
+p.arialItalic {font-family: Arial;font-style: Italic}
+
+/* Define text label alignments */
+.label { display: inline-block}
+.label1 {width: 210px; text-align: right; margin-right: 10px} 
+.label2 {width: 800px; text-align: left} 
+.label3 {width: 628px; text-align: right} 
+
+/* Define page container styles */
+.container {width: 100%; clear: both}
+
+/* Define text input boxes*/
+.input {
+  width: 400px;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: text;
+}
+
+/* Define page buttons*/
+.button {
+  width: 200px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
