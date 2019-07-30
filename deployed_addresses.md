@@ -1,9 +1,8 @@
 # Deployed Addresses
 
-## Marketplace DApp Deployment Details
+## DApp Deployment Details
 
-The DApp has been deployed to the Rinkeby testnet at address 0x3f76A7f9830609F6EB56add68A3a5E3d0280D853.
-The DApp code can be seen verified on Etherscan at https://rinkeby.etherscan.io/address/0x3f76a7f9830609f6eb56add68a3a5e3d0280d853#code.
+This DApp has been deployed to the Rinkeby testnet at address [0x3f76A7f9830609F6EB56add68A3a5E3d0280D853](https://rinkeby.etherscan.io/address/0x3f76a7f9830609f6eb56add68a3a5e3d0280d853#code).
 
 The deployment was carried out, via Infura, with the following truffle-config.js settings;
 
@@ -22,6 +21,7 @@ The deployment was carried out, via Infura, with the following truffle-config.js
       				port: 8545,
       				network_id: "*",
     			},
+
     			rinkeby: {
     			provider: () => new HDWalletProvider(mnemonic, infuraURL),
     			network_id: 4,
@@ -32,106 +32,105 @@ The deployment was carried out, via Infura, with the following truffle-config.js
 
 The deployment output the following details in the terminal;
 
-Starting migrations...
+>Starting migrations...
 
-Network name:    'rinkeby'
-Network id:      4
-Block gas limit: 0x6af68e
+>Network name:    'rinkeby'
+>Network id:      4
+>Block gas limit: 0x6af68e
 
+>1_initial_migration.js
 
-1_initial_migration.js
+>   Deploying 'Migrations'
 
-   Deploying 'Migrations'
-
-   transaction hash:    0x89ce861bc8609e191e7df2078a1a43adf5c8b4d39a8d0dca906699f63b151ad4
-   Blocks: 0            Seconds: 9
-   contract address:    0x92755f1100024a02bEd0a23001Aa7Baa3e04ab98
-   block number:        4815277
-   block timestamp:     1564359078
-   account:             0x72870ce786c2354EFEA2e71C3D24A9362DB72454
-   balance:             2.99391114
-   gas used:            261393
-   gas price:           20 gwei
-   value sent:          0 ETH
-   total cost:          0.00522786 ETH
-
-
-   Saving migration to chain.
-   Saving artifacts
-
-   Total cost:          0.00522786 ETH
+>   transaction hash:    0x89ce861bc8609e191e7df2078a1a43adf5c8b4d39a8d0dca906699f63b151ad4
+>   Blocks: 0            Seconds: 9
+>   contract address:    0x92755f1100024a02bEd0a23001Aa7Baa3e04ab98
+>   block number:        4815277
+>   block timestamp:     1564359078
+>   account:             0x72870ce786c2354EFEA2e71C3D24A9362DB72454
+>   balance:             2.99391114
+>   gas used:            261393
+>   gas price:           20 gwei
+>   value sent:          0 ETH
+>   total cost:          0.00522786 ETH
 
 
-2_deploy_contracts.js
+>   Saving migration to chain.
+>   Saving artifacts
 
-   Deploying 'Marketplace'
-
-   transaction hash:    0x2cf874be52ee5ef412bd8c0483c7d7dae608246a5194211222525634060ad3e1
-   Blocks: 0            Seconds: 9
-   contract address:    0x3f76A7f9830609F6EB56add68A3a5E3d0280D853
-   block number:        4815279
-   block timestamp:     1564359108
-   account:             0x72870ce786c2354EFEA2e71C3D24A9362DB72454
-   balance:             2.91773728
-   gas used:            3766670
-   gas price:           20 gwei
-   value sent:          0 ETH
-   total cost:          0.0753334 ETH
+>   Total cost:          0.00522786 ETH
 
 
-   Saving migration to chain.
-   Saving artifacts
+>2_deploy_contracts.js
 
-   Total cost:           0.0753334 ETH
+>   Deploying 'Marketplace'
+
+>   transaction hash:    0x2cf874be52ee5ef412bd8c0483c7d7dae608246a5194211222525634060ad3e1
+>   Blocks: 0            Seconds: 9
+>   contract address:    0x3f76A7f9830609F6EB56add68A3a5E3d0280D853
+>  block number:        4815279
+>   block timestamp:     1564359108
+>   account:             0x72870ce786c2354EFEA2e71C3D24A9362DB72454
+>   balance:             2.91773728
+>   gas used:            3766670
+>   gas price:           20 gwei
+>   value sent:          0 ETH
+>   total cost:          0.0753334 ETH
 
 
-Summary
+>   Saving migration to chain.
+>   Saving artifacts
 
-Total deployments:   2
-Final cost:          0.08056126 ETH
+>   Total cost:           0.0753334 ETH
 
-## Marketplace DApp Deployment Details
+
+>Summary
+
+>Total deployments:   2
+>Final cost:          0.08056126 ETH
+
+## How to Interact with the DApp
 
 The DApp has been developed with truffle, running on Ubunutu inside Virtualbox, using the following software versions;
 
-VirtualBox Version: v6.0.8 r130520 (Qt5.6.2)
-Ubunutu Version: v18.04.2 LTS (bionic)
-Truffle Version: v5.0.26 (core: 5.0.26)
-Solidity Version: v0.5.0 (solc-js)
-Node Version: v8.10.0
-Web.js Version: v1.0.0-beta.37
-Ganache Core Version: v2.5.6
-Ganache CLI Version v6.4.4
-Ganache GUI Version v2.0.1
-Chrome Version: v75.0.3770.100 (64 bit)
-Metamask Version: v6.7.3
+* VirtualBox Version: v6.0.8 r130520 (Qt5.6.2)
+* Ubunutu Version: v18.04.2 LTS (bionic)
+* Truffle Version: v5.0.26 (core: 5.0.26)
+* Solidity Version: v0.5.0 (solc-js)
+* Node Version: v8.10.0
+* Web.js Version: v1.0.0-beta.37
+* Ganache Core Version: v2.5.6
+* Ganache CLI Version v6.4.4
+* Ganache GUI Version v2.0.1
+* Chrome Version: v75.0.3770.100 (64 bit)
+* Metamask Version: v6.7.3
 
 The following steps describe the process of launching the DApp interface.
 
-Step 1 - Clone the project repository 
-(i) Clone the respository at https://github.com/J-A-McCrae/Marketplace.
+1. Clone the project repository 
+i) Clone the respository at https://github.com/J-A-McCrae/Marketplace.
 
-Step 2 - Start a development blockchain (or skip this step for the Rinkeby testnet deployment)
-(i) Open the first Ubunutu terminal
-(ii) Run 'ganache-cli'
-(iii) Copy the mnemonic displayed in the ganache-cli temrinal window
+2. Start a development blockchain (or skip this step for the Rinkeby testnet deployment)
+i) Open the first Ubunutu terminal
+ii) Run 'ganache-cli'
+iii) Copy the mnemonic displayed in the ganache-cli temrinal window
 
-Step 3 - Connect to a Metamask account 
-(i) Open the browser window
-(ii) Connect Metamask to http://127.0.0.1:8545 (or Rinkeby testnet)
-(iii) Select Metakmask 'Import using account phrase' (or use your own Metamask account for the Rinkeby testnet deployment)
-(iv) Paste the ganache-cli mnemonic into Metamask ( "" "" )
-(v) Create new password for Metamask account ( "" "" )
+3. Connect to a Metamask account 
+i) Open the browser window
+ii) Connect Metamask to http://127.0.0.1:8545 (or Rinkeby testnet)
+iii) Select Metakmask 'Import using account phrase' (or use your own Metamask account for the Rinkeby testnet deployment)
+iv) Paste the ganache-cli mnemonic into Metamask ( "" "" )
+v) Create new password for Metamask account ( "" "" )
 
-Step 4 - Start a local lite-server 
-(i) Open the second Unbuntu terminal
-(ii) Change directory via 'cd <project directory>'
-(iii) Run 'truffle compile'
-(iv) Run 'truffle migrate'
-(v) Run 'npm run dev'
+4. Start a local lite-server 
+i) Open the second Unbuntu terminal
+ii) Change directory via 'cd <project directory>'
+iii) Run 'truffle compile'
+iv) Run 'truffle migrate'
+v) Run 'npm run dev'
 
-Step 5 - Interact with the DApp!
-(i) Interact with the DApp in the browser window at localhost:3000/index.html
+5. Interact with the DApp!
+i) Interact with the DApp in the browser window at localhost:3000/index.html
 
 NB. It is also possible to interact with the deployed contracts via the Etherscan DApp page at https://rinkeby.etherscan.io/dapp/0x3f76a7f9830609f6eb56add68a3a5e3d0280d853#writeContract.
 
