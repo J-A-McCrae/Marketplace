@@ -9,41 +9,41 @@ This DApp has been developed as my final project for the Consensys Blockchain Bo
 
 This repository includes the following files;
 
-* build/contracts/EmergencyStop.json
-* build/contracts/Marketplace.json
-* build/contracts/Migrations.json
-
-* LibraryDemo.sol
-* contracts/EmergencyStop.sol
-* contracts/Marketplace.sol
-* contracts/Migrations.sol
-
-* migrations/1_initial_migration.js
-* migrations/2_deploy_contracts.js
-
-* node_modules/..
-
-* src/favicon.ico
-* src/index.html
-* src/index-customer.html
-* src/index-manager.html
-* src/styles.css
-* src/js/index.js
-* src/js/truffle-contract.js
-* src/js/web3.min.js
-
-* test/exceptionsHelpers.js
-* test/MarketplaceProxy.sol
-* test/TestMarketplace.sol
-
-* bs-config.json
-* package.json
-* package-lock.json
-* truffle-congif.js
-* avoiding_common_attacks.ms
-* deployed_address.md
-* design_pattern_decisions.md
-* README.md
+> build/contracts/EmergencyStop.json
+> build/contracts/Marketplace.json
+> build/contracts/Migrations.json
+> 
+> LibraryDemo.sol
+> contracts/EmergencyStop.sol
+> contracts/Marketplace.sol
+> contracts/Migrations.sol
+> 
+> migrations/1_initial_migration.js
+> migrations/2_deploy_contracts.js
+> 
+> node_modules/..
+> 
+> src/favicon.ico
+> src/index.html
+> src/index-customer.html
+> src/index-manager.html
+> src/styles.css
+> src/js/index.js
+> src/js/truffle-contract.js
+> src/js/web3.min.js
+> 
+> test/exceptionsHelpers.js
+> test/MarketplaceProxy.sol
+> test/TestMarketplace.sol
+> 
+> bs-config.json
+> package.json
+> package-lock.json
+> truffle-congif.js
+> avoiding_common_attacks.ms
+> deployed_address.md
+> design_pattern_decisions.md
+> README.md
 
 ## What This DApp Does
 
@@ -67,7 +67,7 @@ The following functions are available to be called/executed in the smart contrac
 
 ## Hypothetical User Story 
 
-Alice wishes to create an online global store where her friends are free to list their products. She launches the Marketplace DApp and adds the addresses of her friends as authorised store managers. Alice's new store managers proceed to add products to the store and start generating sales. Customers from all over the world access the store and purchase products via their Metamask accounts. After further development, Alice notices a potential security exploit in the original deployment. Alice activates the circuit breaker to disable all contract functions and safely withdraws all the store funds.
+Alice wishes to create an online global store where her friends are free to list their products. She launches the Marketplace DApp and adds the addresses of her friends as authorised store managers. Alice's new store managers proceed to add products to the store and start generating sales. Customers from all over the world access the store and purchase products via their Metamask accounts. After further development, Alice notices a potential security exploit in the original deployment. She activates the circuit breaker to disable all contract functions and safely withdraws all the store funds.
 
 ## How to Setup for Evaluation
 Please refer to the file deployed_addresses.md for details of how to interact with this DApp
