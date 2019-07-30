@@ -107,22 +107,22 @@ This DApp has been developed with truffle, running on Ubunutu inside Virtualbox,
 
 The following steps describe the process of launching the DApp interface.
 
-1. Clone the project repository 
--i) Clone the respository at https://github.com/J-A-McCrae/Marketplace.
+1. **Clone project repository** 
+- i) Clone the respository at https://github.com/J-A-McCrae/Marketplace.
 
-2. Start a development blockchain (or skip this step for the Rinkeby testnet deployment)
+2. **Start a development blockchain (or skip this step for the Rinkeby testnet deployment)**
 - i) Open the first Ubunutu terminal
 - ii) Run 'ganache-cli'
 - iii) Copy the mnemonic displayed in the ganache-cli temrinal window
 
-3. Connect to a Metamask account 
+3. **Connect to Metamask**
 - i) Open the browser window
 - ii) Connect Metamask to http://127.0.0.1:8545 (or Rinkeby testnet)
 - iii) Select Metakmask 'Import using account phrase' (or use your own Metamask account for the Rinkeby testnet deployment)
 - iv) Paste the ganache-cli mnemonic into Metamask ( "" "" )
 - v) Create new password for Metamask account ( "" "" )
 
-4. Start a local lite-server 
+4. **Start a local lite-server** 
 - i) Open the second Unbuntu terminal
 - ii) Change directory via 'cd <project directory>'
 - iii) Run 'truffle compile'
