@@ -111,26 +111,26 @@ The following steps describe the process of launching the DApp interface.
 -i) Clone the respository at https://github.com/J-A-McCrae/Marketplace.
 
 2. Start a development blockchain (or skip this step for the Rinkeby testnet deployment)
--i) Open the first Ubunutu terminal
--ii) Run 'ganache-cli'
--iii) Copy the mnemonic displayed in the ganache-cli temrinal window
+- i) Open the first Ubunutu terminal
+- ii) Run 'ganache-cli'
+- iii) Copy the mnemonic displayed in the ganache-cli temrinal window
 
 3. Connect to a Metamask account 
--i) Open the browser window
--ii) Connect Metamask to http://127.0.0.1:8545 (or Rinkeby testnet)
--iii) Select Metakmask 'Import using account phrase' (or use your own Metamask account for the Rinkeby testnet deployment)
--iv) Paste the ganache-cli mnemonic into Metamask ( "" "" )
--v) Create new password for Metamask account ( "" "" )
+- i) Open the browser window
+- ii) Connect Metamask to http://127.0.0.1:8545 (or Rinkeby testnet)
+- iii) Select Metakmask 'Import using account phrase' (or use your own Metamask account for the Rinkeby testnet deployment)
+- iv) Paste the ganache-cli mnemonic into Metamask ( "" "" )
+- v) Create new password for Metamask account ( "" "" )
 
 4. Start a local lite-server 
--i) Open the second Unbuntu terminal
--ii) Change directory via 'cd <project directory>'
--iii) Run 'truffle compile'
--iv) Run 'truffle migrate'
--v) Run 'npm run dev'
+- i) Open the second Unbuntu terminal
+- ii) Change directory via 'cd <project directory>'
+- iii) Run 'truffle compile'
+- iv) Run 'truffle migrate'
+- v) Run 'npm run dev'
 
 5. Interact with the DApp!
--i) Interact with the DApp in the browser window at localhost:3000/index.html
+- i) Interact with the DApp in the browser window at localhost:3000/index.html
 
 NB. It is also possible to interact with the deployed contracts via the Etherscan DApp page at https://rinkeby.etherscan.io/dapp/0x3f76a7f9830609f6eb56add68a3a5e3d0280d853#writeContract.
 
