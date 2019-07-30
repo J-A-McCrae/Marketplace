@@ -124,12 +124,12 @@ The following steps describe the process of launching the DApp interface.
 
 4. **Start a local lite-server** 
 - Open the second Unbuntu terminal
-- Change directory via 'cd <project directory>'
+- Change directory to project directory
 - Run 'truffle compile'
 - Run 'truffle migrate'
 - Run 'npm run dev'
 
-5. Interact with the DApp!
+5. **Interact with the DApp!**
 - Interact with the DApp in the browser window at localhost:3000/index.html
 
 NB. It is also possible to interact with the deployed contracts via the Etherscan DApp page at https://rinkeby.etherscan.io/dapp/0x3f76a7f9830609f6eb56add68a3a5e3d0280d853#writeContract.
