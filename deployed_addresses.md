@@ -23,9 +23,9 @@ The deployment was carried out, via Infura, with the following truffle-config.js
     			},
 
     			rinkeby: {
-    			provider: () => new HDWalletProvider(mnemonic, infuraURL),
-    			network_id: 4,
-    			gas: 5500000,
+    				provider: () => new HDWalletProvider(mnemonic, infuraURL),
+    				network_id: 4,
+    				gas: 5500000,
     			},
 		},
 	}
@@ -33,15 +33,15 @@ The deployment was carried out, via Infura, with the following truffle-config.js
 The deployment output the following details in the terminal;
 
 >Starting migrations...
-
+> 
 >Network name:    'rinkeby'
 >Network id:      4
 >Block gas limit: 0x6af68e
-
+> 
 >1_initial_migration.js
-
+> 
 >   Deploying 'Migrations'
-
+> 
 >   transaction hash:    0x89ce861bc8609e191e7df2078a1a43adf5c8b4d39a8d0dca906699f63b151ad4
 >   Blocks: 0            Seconds: 9
 >   contract address:    0x92755f1100024a02bEd0a23001Aa7Baa3e04ab98
@@ -53,18 +53,18 @@ The deployment output the following details in the terminal;
 >   gas price:           20 gwei
 >   value sent:          0 ETH
 >   total cost:          0.00522786 ETH
-
-
+> 
+> 
 >   Saving migration to chain.
 >   Saving artifacts
-
+> 
 >   Total cost:          0.00522786 ETH
-
-
+> 
+> 
 >2_deploy_contracts.js
-
+> 
 >   Deploying 'Marketplace'
-
+> 
 >   transaction hash:    0x2cf874be52ee5ef412bd8c0483c7d7dae608246a5194211222525634060ad3e1
 >   Blocks: 0            Seconds: 9
 >   contract address:    0x3f76A7f9830609F6EB56add68A3a5E3d0280D853
@@ -76,22 +76,22 @@ The deployment output the following details in the terminal;
 >   gas price:           20 gwei
 >   value sent:          0 ETH
 >   total cost:          0.0753334 ETH
-
-
+> 
+> 
 >   Saving migration to chain.
 >   Saving artifacts
-
+> 
 >   Total cost:           0.0753334 ETH
-
-
+> 
+> 
 >Summary
-
+> 
 >Total deployments:   2
 >Final cost:          0.08056126 ETH
 
-## How to Interact with the DApp
+## Interacting with the DApp
 
-The DApp has been developed with truffle, running on Ubunutu inside Virtualbox, using the following software versions;
+This DApp has been developed with truffle, running on Ubunutu inside Virtualbox, using the following software versions;
 
 * VirtualBox Version: v6.0.8 r130520 (Qt5.6.2)
 * Ubunutu Version: v18.04.2 LTS (bionic)
@@ -108,29 +108,29 @@ The DApp has been developed with truffle, running on Ubunutu inside Virtualbox, 
 The following steps describe the process of launching the DApp interface.
 
 1. Clone the project repository 
-i) Clone the respository at https://github.com/J-A-McCrae/Marketplace.
+1.1 Clone the respository at https://github.com/J-A-McCrae/Marketplace.
 
 2. Start a development blockchain (or skip this step for the Rinkeby testnet deployment)
-i) Open the first Ubunutu terminal
-ii) Run 'ganache-cli'
-iii) Copy the mnemonic displayed in the ganache-cli temrinal window
+2.1 Open the first Ubunutu terminal
+2.2 Run 'ganache-cli'
+2.3 Copy the mnemonic displayed in the ganache-cli temrinal window
 
 3. Connect to a Metamask account 
-i) Open the browser window
-ii) Connect Metamask to http://127.0.0.1:8545 (or Rinkeby testnet)
-iii) Select Metakmask 'Import using account phrase' (or use your own Metamask account for the Rinkeby testnet deployment)
-iv) Paste the ganache-cli mnemonic into Metamask ( "" "" )
-v) Create new password for Metamask account ( "" "" )
+3.1 Open the browser window
+3.2 Connect Metamask to http://127.0.0.1:8545 (or Rinkeby testnet)
+3.3 Select Metakmask 'Import using account phrase' (or use your own Metamask account for the Rinkeby testnet deployment)
+3.4 Paste the ganache-cli mnemonic into Metamask ( "" "" )
+3.5 Create new password for Metamask account ( "" "" )
 
 4. Start a local lite-server 
-i) Open the second Unbuntu terminal
-ii) Change directory via 'cd <project directory>'
-iii) Run 'truffle compile'
-iv) Run 'truffle migrate'
-v) Run 'npm run dev'
+4.1 Open the second Unbuntu terminal
+4.2 Change directory via 'cd <project directory>'
+4.3 Run 'truffle compile'
+4.4 Run 'truffle migrate'
+4.5 Run 'npm run dev'
 
 5. Interact with the DApp!
-i) Interact with the DApp in the browser window at localhost:3000/index.html
+5.1 Interact with the DApp in the browser window at localhost:3000/index.html
 
 NB. It is also possible to interact with the deployed contracts via the Etherscan DApp page at https://rinkeby.etherscan.io/dapp/0x3f76a7f9830609f6eb56add68a3a5e3d0280d853#writeContract.
 
