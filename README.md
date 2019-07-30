@@ -9,45 +9,45 @@ This DApp has been developed as my final project for the Consensys Blockchain Bo
 
 This repository includes the following files;
 
-> build/contracts/EmergencyStop.json
-> build/contracts/Marketplace.json
-> build/contracts/Migrations.json
+> build/contracts/EmergencyStop.json  
+> build/contracts/Marketplace.json  
+> build/contracts/Migrations.json  
 > 
-> LibraryDemo.sol
-> contracts/EmergencyStop.sol
-> contracts/Marketplace.sol
-> contracts/Migrations.sol
+> LibraryDemo.sol  
+> contracts/EmergencyStop.sol  
+> contracts/Marketplace.sol  
+> contracts/Migrations.sol  
 > 
-> migrations/1_initial_migration.js
-> migrations/2_deploy_contracts.js
+> migrations/1_initial_migration.js  
+> migrations/2_deploy_contracts.js  
 > 
-> node_modules/..
+> node_modules/..  
 > 
-> src/favicon.ico
-> src/index.html
-> src/index-customer.html
-> src/index-manager.html
-> src/styles.css
-> src/js/index.js
-> src/js/truffle-contract.js
-> src/js/web3.min.js
+> src/favicon.ico  
+> src/index.html  
+> src/index-customer.html  
+> src/index-manager.html  
+> src/styles.css  
+> src/js/index.js  
+> src/js/truffle-contract.js  
+> src/js/web3.min.js  
 > 
-> test/exceptionsHelpers.js
-> test/MarketplaceProxy.sol
-> test/TestMarketplace.sol
+> test/exceptionsHelpers.js  
+> test/MarketplaceProxy.sol  
+> test/TestMarketplace.sol  
 > 
-> bs-config.json
-> package.json
-> package-lock.json
-> truffle-congif.js
-> avoiding_common_attacks.ms
-> deployed_address.md
-> design_pattern_decisions.md
-> README.md
+> bs-config.json  
+> package.json  
+> package-lock.json  
+> truffle-congif.js  
+> avoiding_common_attacks.md  
+> deployed_address.md  
+> design_pattern_decisions.md  
+> README.md  
 
 ## What This DApp Does
 
-This DApp is a simple online marketplace where anyone can view products in the store and purchase them for the specified price.
+This DApp is a simple online marketplace where anyone can view products in the store and purchase them for the listed price.
 
 The contract owner is the store owner and has the ability to authorise specific addresses as store managers.
 Only store managers have the ability to add, remove and change the price of store products.
