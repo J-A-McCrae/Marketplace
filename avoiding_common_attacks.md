@@ -7,8 +7,8 @@ The following four common attacks are explained below and the associated user ri
 A tx.origin attack may be executed via a malicious proxy contract forwarding calls from the contract owner. 
 The global variable tx.origin should never be used for authorisation (msg.sender is the safer alternative).
 
-> tx.origin references the address of the original transaction sender from the full call chain.
-> msg.sender references the address of the sender of the current call.
+* tx.origin references the address of the original transaction sender from the full call chain.
+* msg.sender references the address of the sender of the current call.
 
 This DApp implements privilaged access to certain functions using only msg.sender, and never tx.origin.
 
