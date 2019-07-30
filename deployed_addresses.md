@@ -108,29 +108,29 @@ This DApp has been developed with truffle, running on Ubunutu inside Virtualbox,
 The following steps describe the process of launching the DApp interface.
 
 1. Clone the project repository 
-1.1 Clone the respository at https://github.com/J-A-McCrae/Marketplace.
+-i) Clone the respository at https://github.com/J-A-McCrae/Marketplace.
 
 2. Start a development blockchain (or skip this step for the Rinkeby testnet deployment)
-2.1 Open the first Ubunutu terminal
-2.2 Run 'ganache-cli'
-2.3 Copy the mnemonic displayed in the ganache-cli temrinal window
+-i) Open the first Ubunutu terminal
+-ii) Run 'ganache-cli'
+-iii) Copy the mnemonic displayed in the ganache-cli temrinal window
 
 3. Connect to a Metamask account 
-3.1 Open the browser window
-3.2 Connect Metamask to http://127.0.0.1:8545 (or Rinkeby testnet)
-3.3 Select Metakmask 'Import using account phrase' (or use your own Metamask account for the Rinkeby testnet deployment)
-3.4 Paste the ganache-cli mnemonic into Metamask ( "" "" )
-3.5 Create new password for Metamask account ( "" "" )
+-i) Open the browser window
+-ii) Connect Metamask to http://127.0.0.1:8545 (or Rinkeby testnet)
+-iii) Select Metakmask 'Import using account phrase' (or use your own Metamask account for the Rinkeby testnet deployment)
+-iv) Paste the ganache-cli mnemonic into Metamask ( "" "" )
+-v) Create new password for Metamask account ( "" "" )
 
 4. Start a local lite-server 
-4.1 Open the second Unbuntu terminal
-4.2 Change directory via 'cd <project directory>'
-4.3 Run 'truffle compile'
-4.4 Run 'truffle migrate'
-4.5 Run 'npm run dev'
+-i) Open the second Unbuntu terminal
+-ii) Change directory via 'cd <project directory>'
+-iii) Run 'truffle compile'
+-iv) Run 'truffle migrate'
+-v) Run 'npm run dev'
 
 5. Interact with the DApp!
-5.1 Interact with the DApp in the browser window at localhost:3000/index.html
+-i) Interact with the DApp in the browser window at localhost:3000/index.html
 
 NB. It is also possible to interact with the deployed contracts via the Etherscan DApp page at https://rinkeby.etherscan.io/dapp/0x3f76a7f9830609f6eb56add68a3a5e3d0280d853#writeContract.
 
