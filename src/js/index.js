@@ -143,7 +143,7 @@ App = {
       App.contracts.Marketplace.deployed().then(function(instance) {
         return instance.readStoreProducts.call(prodIDReadOwner);
       }).then(function(res) {       
-        $('#lastUserAction').text("Requested store product data. Success!.");       
+        $('#lastUserAction').text("Requested store product data. Success!");       
         $('#report1').text("Product ID: " + res[0]);
         $('#report2').text("Product Name: " + res[1]);
         $('#report3').text("Total Units: " + res[2]);
@@ -155,6 +155,9 @@ App = {
         
         if (err.message.includes("Access denied. This contract has been temporarily disabled.")) {
           $('#report1').text("Access denied. This contract has been temporarily disabled."); 
+        } else if 
+          (err.message.includes("Internal JSON-RPC error")) {
+          $('#report1').text("Access denied. This contract has been temporarily disabled.");           
         } else {
           $('#report1').text(err.message); 
         } 
@@ -471,6 +474,46 @@ App = {
         $('#report6').text(""); 
         return App.verifyOwner();
       });
+    },
+
+    /// @dev Execute the emergencyStopFunction function of the deployed instance (App.contracts.Marketplace)       
+    inputCircuitBreaker: function () { 
+      let circuitBreak 
+      
+      if (localStorage.getItem("cbToggle") != "on") {
+        circuitBreak = true
+        localStorage.setItem("cbToggle", "on");
+      } else {
+        circuitBreak = false
+        localStorage.setItem("cbToggle", "off");        
+      }  
+
+      App.contracts.Marketplace.deployed().then(function(instance) {
+        return instance.emergencyStopFunction(circuitBreak);
+      }).then(function(res) {
+        $('#lastUserAction').text("Requested toggling circuit breaker. Success!"); 
+        $('#report1').text("Circuit breaker enabled = " + circuitBreak);
+        $('#report2').text("");
+        $('#report3').text("");
+        $('#report4').text("");
+        $('#report5').text("");
+        $('#report6').text("");  
+      }).catch(function(err) {
+      $('#lastUserAction').text("Requested toggling circuit breaker. Unsuccessful..."); 
+      
+      if (err.message.includes("Access denied. Access restricted to contract owner.")) {
+        $('#report1').text("Access denied. Access restricted to contract owner.");              
+      } else {
+        $('#report1').text(err.message); 
+      }    
+        $('#report2').text("");
+        $('#report3').text("");
+        $('#report4').text("");
+        $('#report5').text("");
+        $('#report6').text(""); 
+      });
+    document.getElementById('circuit_breaker').value = ""
+    return App.verifyOwner();
     },
 
 };
