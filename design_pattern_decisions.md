@@ -25,7 +25,7 @@ The following design patterns have not been implemented in this DApp.
 ## Design Pattern No. 1 - Circuit Breaker
 
 This DApp implements a circuit breaker design pattern, via the EmergencyStop contract. 
-This allows the contract owner to temporarily disable the functions of the Marketplace contract.
+This allows the contract owner to temporarily disable the functions of the Marketplace contract (except readStoreFunds & WithdrawStoreFunds).
 
 i)	The EmergencyStop contract declares a modifier requiring emergencyStopSwitch to be false.
 
