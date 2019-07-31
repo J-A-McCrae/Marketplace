@@ -110,15 +110,23 @@ contract TestMarketplace {
         Assert.equal(resultThree, false, "Store manager was able to change store product price");
     }
 
-    /// @dev testForNotStoreOwnerWithdrawingFunds() A function to execute Test #4
-    function testForNotStoreOwnerWithdrawingFunds() public {
+    /// @dev testForNotStoreOwnerReadingFunds() A function to execute Test #4
+    function testForNotStoreOwnerReadingFunds() public {
 
-        /// @dev Not store owner tries to withdraw funds
-        bool resultOne = proxyClientOne.proxyWithdrawStoreFunds();
-        Assert.equal(resultOne, false, "Not store owner was able to withdraw funds");
+        /// @dev Not store owner tries to read store funds
+        bool resultOne = proxyClientOne.proxyReadStoreFunds();
+        Assert.equal(resultOne, false, "Not store owner was able to read store funds");
     }
 
-    /// @dev testForActivatingCircuitBreaker() A function to execute Test #5
+    /// @dev testForNotStoreOwnerWithdrawingFunds() A function to execute Test #5
+    function testForNotStoreOwnerWithdrawingFunds() public {
+
+        /// @dev Not store owner tries to withdraw store funds
+        bool resultOne = proxyClientOne.proxyWithdrawStoreFunds();
+        Assert.equal(resultOne, false, "Not store owner was able to withdraw store funds");
+    }
+
+    /// @dev testForActivatingCircuitBreaker() A function to execute Test #6
     function testForActivatingCircuitBreaker() public {
 
         /// @dev Owner tries to trigger circuit breaker

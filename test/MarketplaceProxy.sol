@@ -118,13 +118,13 @@ contract MarketplaceProxy {
 
     /// @dev proxyReadStoreFunds() A function to call the function readStoreFunds in marketplace
     /// @return boolean data type to indicate call success/failure
-    //function proxyReadStoreFunds()
-    //    public
-    //    returns (bool)
-    //{
-    //    (bool noErrors, ) = address(marketplace).call(abi.encodeWithSignature("readStoreFunds"));
-    //    return noErrors;
-    //}
+    function proxyReadStoreFunds()
+        public
+        returns (bool)
+    {
+        (bool noErrors, ) = address(marketplace).call(abi.encodeWithSignature("readStoreFunds"));
+        return noErrors;
+    }
 
     /// @dev proxyWithdrawStoreFunds() A function to call the function withdrawStoreFunds in marketplace
     /// @return boolean data type to indicate call success/failure
