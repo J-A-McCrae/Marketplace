@@ -4,7 +4,7 @@
 
 The folling tests have been implemented for the two DApp contracts.
 
-Marketplace.sol
+**Marketplace.sol**
 * Test For Not Exceeding Integer Caps
 * Test For Buying Product With Insufficient Funds
 * Test For Not Store Manager Changing Product Price
@@ -13,7 +13,7 @@ Marketplace.sol
 
 The 5 No. tests for Marketplace.sol were chosen to test key potential security vulnerabilities (integer overflow/underflow protection, privilaged access and funds transfer). 
 
-EmergencyStop.sol
+**EmergencyStop.sol**
 * Test for Activating Circuit Breaker
 
 The 1 No. test for EmergencyStop.sol was was chosen to test the sole function in the contract (i.e the circuit breaker design pattern).
