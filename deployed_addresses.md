@@ -118,16 +118,16 @@ The following steps describe the process of launching the DApp interface.
 
 3. **Connect to Metamask**
 - Open browser window
-- Connect Metamask to http://127.0.0.1:8545 (Rinkeby testnet for the Rinkeby deployment)
-- Select Metamask 'Import using account seed phrase' (your own account for the Rinkeby deployment)
-- Paste the ganache-cli mnemonic into Metamask ( "" "" )
-- Create new password for Metamask account ( "" "" )
+- Connect Metamask to http://127.0.0.1:8545 (use Rinkeby testnet for the Rinkeby deployment)
+- Select Metamask 'Import using account seed phrase' (use your own account for the Rinkeby deployment)
+- Paste the ganache-cli mnemonic into Metamask (skip this for the Rinkeby deployment)
+- Create new password for Metamask account (skip this for the Rinkeby deployment)
 
 4. **Start a local lite-server** 
 - Open the second Unbuntu terminal
 - Change directory to project directory
-- Run 'truffle compile'
-- Run 'truffle migrate'
+- Run 'truffle compile' (skip this for the Rinkeby deployment)
+- Run 'truffle migrate' (skip this for the Rinkeby deployment)
 - Run 'npm run dev'
 
 5. **Interact with the DApp!**
