@@ -109,16 +109,17 @@ The following steps describe the process of launching the DApp interface.
 
 1. **Clone project repository** 
 - Clone the respository at https://github.com/J-A-McCrae/Marketplace.
+- Extract node_modules.tar.xz (node_modules folder required for lite-server) 
 
-2. **Start a development blockchain (or skip this step for the Rinkeby Dapp)**
+2. **Start a development blockchain (skip this step for the Rinkeby deployment)**
 - Open the first Ubunutu terminal
 - Run 'ganache-cli'
 - Copy the mnemonic displayed in the ganache-cli terminal window
 
 3. **Connect to Metamask**
-- Open the browser window
-- Connect Metamask to http://127.0.0.1:8545 (or Rinkeby testnet)
-- Select Metakmask 'Import using account phrase' (or use your own Metamask account for the Rinkeby DApp)
+- Open browser window
+- Connect Metamask to http://127.0.0.1:8545 (Rinkeby testnet for the Rinkeby deployment)
+- Select Metamask 'Import using account seed phrase' (your own account for the Rinkeby deployment)
 - Paste the ganache-cli mnemonic into Metamask ( "" "" )
 - Create new password for Metamask account ( "" "" )
 
