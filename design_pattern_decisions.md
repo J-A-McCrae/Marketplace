@@ -2,24 +2,24 @@
 
 The following design patterns have been implemented in this DApp.
 
-1. Circuit Breaker
-2. Privilaged Access
-3. Integer Caps
-4. Simple & Modular Design
+1. **Circuit Breaker**
+2. **Privilaged Access**
+3. **Integer Caps**
+4. **Simple & Modular Design**
 
-* The circuit breaker design pattern was deemed an simple and effective way to mitigate the risk of security flaws subsequent to deployment. This method also allowed demonstration of inheritance.
-* The privilaged access design pattern was deemed the best way to restrict access to specific contract functions to Store Owner, Store Manager and Store Customer as required by the DApp.
-* The integer caps design pattern was deemed an effective method to mitgiate the risk of integer overflows and underflows and to minimize the amount fo funds at risk.
+* The circuit breaker design pattern was deemed a simple and effective way to mitigate the risk of security flaws subsequent to deployment. This method also allowed demonstration of inheritance.
+* The privilaged access design pattern was deemed the best way to restrict access to specific contract functions to Store Owner, Store Manager and Store Customer, respectively - as required by the DApp.
+* The integer caps design pattern was deemed an effective method to mitigate the risk of integer overflows and underflows, and to minimize the amount of funds at risk.
 * The simple and modular design pattern was deemed an effective method to mitigate the risk of introducing security flaws into the code by minimizing complexity.
 
 The following design patterns have not been implemented in this DApp.
 
-1. Contract Self Destruction
-2. Factory Contract
-3. Speed Bumps (Delayed Processing)
+1. **Contract Self Destruction**
+2. **Factory Contract**
+3. **Speed Bumps (Delayed Processing)**
 
 * The contract self destruction design pattern was discarded in favour of the circuit breaker design pattern as it was deemed undesirably irriversible.
-* The factory contract design pattern was not implemented as it was deemed too complex and unnecessary for this DApp. Previous projects such as The DAO have highlighted the risks assocaited with this.
+* The factory contract design pattern was not implemented as it was deemed too complex and unnecessary for this DApp. Previous projects such as The DAO have highlighted the risks associated with this.
 * The speed bumps design pattern was not implemented as it was deemed unnecessary for this DApp. It was also observed that it would be undesirably time-consuming to evaluate.
 
 ## Design Pattern No. 1 - Circuit Breaker
