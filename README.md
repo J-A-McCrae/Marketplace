@@ -13,7 +13,7 @@ This repository includes the following files;
 > build/contracts/Marketplace.json  
 > build/contracts/Migrations.json  
 > 
-> LibraryDemo.sol  
+> contracts/LibraryDemo.sol  
 > contracts/EmergencyStop.sol  
 > contracts/Marketplace.sol  
 > contracts/Migrations.sol  
