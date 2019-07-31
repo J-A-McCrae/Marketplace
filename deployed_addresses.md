@@ -96,7 +96,7 @@ This DApp has been developed with truffle, running on Ubunutu inside Virtualbox,
 * VirtualBox Version: v6.0.8 r130520 (Qt5.6.2)
 * Ubunutu Version: v18.04.2 LTS (bionic)
 * Truffle Version: v5.0.26 (core: 5.0.26)
-* Solidity Version: v0.5.0 (solc-js)
+* Solidity Version: v0.5.8+commit.23d335f2
 * Node Version: v8.10.0
 * Web.js Version: v1.0.0-beta.37
 * Ganache Core Version: v2.5.6
@@ -131,6 +131,7 @@ The following steps describe the process of launching the DApp interface.
 - Run 'npm run dev'
 
 5. **Interact with the DApp!**
+- Accept connection to Marketplace via the Metamask pop up window
 - Interact with the DApp in the browser window at localhost:3000/index.html
 
 NB. It is also possible to interact with the deployed contracts via the Etherscan DApp page at https://rinkeby.etherscan.io/dapp/0x3f76a7f9830609f6eb56add68a3a5e3d0280d853#writeContract.
