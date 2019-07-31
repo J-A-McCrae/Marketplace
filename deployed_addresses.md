@@ -30,7 +30,7 @@ The deployment was carried out, via Infura, with the following truffle-config.js
 		},
 	}
 
-The deployment output the following details in the terminal;
+The deployment process resulted in the following details output to the terminal;
 
 >Starting migrations...
 > 
@@ -113,7 +113,7 @@ The following steps describe the process of launching the DApp interface.
 2. **Start a development blockchain (or skip this step for the Rinkeby Dapp)**
 - Open the first Ubunutu terminal
 - Run 'ganache-cli'
-- Copy the mnemonic displayed in the ganache-cli temrinal window
+- Copy the mnemonic displayed in the ganache-cli terminal window
 
 3. **Connect to Metamask**
 - Open the browser window
