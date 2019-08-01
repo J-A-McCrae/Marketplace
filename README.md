@@ -72,8 +72,11 @@ Alice wishes to create an online global store where her friends are free to list
 ## How to Setup for Evaluation
 Please refer to the file deployed_addresses.md for details of how to interact with this DApp
 
+A Demo video is avaialble at the following URL;
+https://drive.google.com/file/d/1J0IvCiV7MFiwQ9B74TWNlhvB1N3CrYaq/view?usp=sharing
+
 ## Author Contact Details
 
-Please feel free to contact me on Slack or via e-mail below
+Please feel free to contact me via e-mail below
 
 <john.a.mccrae@gmail.com>
