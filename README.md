@@ -73,7 +73,7 @@ Alice wishes to create an online global store where her friends are free to list
 Please refer to the file deployed_addresses.md for details of how to interact with this DApp
 
 My demo video is available at the following URL;
-https://drive.google.com/file/d/1J0IvCiV7MFiwQ9B74TWNlhvB1N3CrYaq/view?usp=sharing
+https://drive.google.com/file/d/1rgbg64YuWfYoJCcLRJfgjl-iNFCt_vY6/view?usp=sharing
 
 ## Author Contact Details
 
